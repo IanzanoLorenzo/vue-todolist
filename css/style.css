@@ -3,3 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    background-color: rgb(81, 98, 199);
+    color: aliceblue;
+}
+
+.task-done{
+    text-decoration-line: line-through;
+}
+
+.input-group-text{
+    cursor: pointer !important;
+}
