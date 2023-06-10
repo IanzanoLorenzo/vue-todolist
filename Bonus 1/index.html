@@ -30,7 +30,7 @@
                                 <i class="fa-solid fa-square-minus btn btn-outline-danger ms-3" @click="deleteTask(index)"></i>
                             </div>
                         </li>
-                        <li class="list-group-item text-center" v-show="tasks.length === 0"><h4>Non ci sono task</h4></li>
+                        <li class="list-group-item text-center" v-if="tasks.length === 0"><h4>Non ci sono task</h4></li>
                     </ul>
                 </div>
                 <div class="input-group input-group-sm mt-4">
