@@ -21,19 +21,20 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <div class="card-header d-flex justify-content-between"><span>Task</span> <div class="bottoni"><span>Done</span><span class="ms-2">Modify</span><span class="ms-2">Delete</span></div></div>
-                        <li class="list-group-item d-flex justify-content-between" v-for="(task, index) in tasks">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" v-for="(task, index) in tasks">
                             <span v-if="task.modify" ><input v-model="task.text"></span>
-                            <span v-else :class="task.done ? 'task-done' : ''">{{ task.text }}</span>
+                            <span v-else class="text-capitalize text-truncate" :class="task.done ? 'text-decoration-line-through' : ''"> {{ task.text }} </span>
                             <div class="bottoni d-flex">
                                 <i class="fa-solid btn btn-outline-primary" :class="task.done ? 'fa-check' : 'fa-xmark'" @click="doneUndoneTask(index)"></i>
                                 <i class="fa-solid fa-pen-to-square btn btn-outline-secondary ms-3" @click="modifyTask(index)"></i>
                                 <i class="fa-solid fa-square-minus btn btn-outline-danger ms-3" @click="deleteTask(index)"></i>
                             </div>
                         </li>
+                        <li class="list-group-item text-center" v-show="tasks.length === 0"><h4>Non ci sono task</h4></li>
                     </ul>
                 </div>
                 <div class="input-group input-group-sm mt-4">
-                    <span class="input-group-text"><i class="fa-solid fa-square-plus fs-4" @click="addNewTask"></i></span>
+                    <span class="input-group-text" @click="addNewTask">Add new task</i></span>
                     <input @keyup.enter="addNewTask" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" v-model="newTask">
                 </div>
             </div>

@@ -19,8 +19,8 @@ nav{
     color: aliceblue;
 }
 
-.task-done{
-    text-decoration-line: line-through;
+.span-text{
+    max-width: 70%;
 }
 
 .input-group-text{
