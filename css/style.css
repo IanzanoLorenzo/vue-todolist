@@ -19,10 +19,6 @@ nav{
     color: aliceblue;
 }
 
-.task-done{
-    text-decoration-line: line-through;
-}
-
 .input-group-text{
     cursor: pointer !important;
 }

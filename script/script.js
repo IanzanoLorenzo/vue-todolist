@@ -53,14 +53,18 @@ createApp({
             this.tasks.splice(index, 1)
         },
         addNewTask(){
-            let obj = {
-                text : this.newTask,
-                done : false,
-                modify : false
+            if(this.newTask.trim() !== ''){
+                let obj = {
+                    text : this.newTask.trim(),
+                    done : false,
+                    modify : false
+                }
+    
+                this.tasks.push(obj)
+    
+            } else{
+                alert('Inserisci una task valida')
             }
-
-            this.tasks.push(obj)
-
             this.newTask = ''
         }
     },
