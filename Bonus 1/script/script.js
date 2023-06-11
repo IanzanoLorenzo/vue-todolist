@@ -68,8 +68,12 @@ createApp({
             this.newTask = ''
         },
         modifyTask(index){
+            if(this.tasks[index].text.trim() === ''){
+                console.log('cipolla')
+                this.tasks.splice(index, 1)
+            }else{
             this.tasks[index].modify = !this.tasks[index].modify
-            console.log(this.tasks[index].modify)
+            }
         }
     },
 }).mount('#app')

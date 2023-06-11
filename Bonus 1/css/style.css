@@ -17,10 +17,7 @@ nav{
     z-index: 20;
     background-color: rgb(81, 98, 199);
     color: aliceblue;
-}
-
-.span-text{
-    max-width: 70%;
+    padding: 40px;
 }
 
 .input-group-text{
